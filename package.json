@@ -1,0 +1,17 @@
+{
+  "name": "cypress-first",
+  "version": "1.0.0",
+  "description": "first cypress try",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "SVorobyov",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.1"
+  }
+}
