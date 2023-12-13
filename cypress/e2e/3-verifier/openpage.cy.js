@@ -6,6 +6,6 @@ describe("example to-do app", () => {
   });
 
   it("can check an item on a page", () => {
-    cy.get("Home").should("be.visible");
+    cy.get(".nav-item").should("be.visible");
   });
 });
