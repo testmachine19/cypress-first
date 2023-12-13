@@ -1,8 +1,6 @@
 describe("Checking header", () => {
   beforeEach(() => {
-    cy.visit(
-      "https://sqlverifier-live-6e21ca0ed768.herokuapp.com/?page=1&sort=id,asc"
-    );
+    cy.visit("/");
     cy.get('[data-cy="accountMenu"]').click();
     cy.get('[data-cy="login"]').click();
     cy.get("#username").type("st_st");
