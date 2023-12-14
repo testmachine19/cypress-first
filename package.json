@@ -6,7 +6,10 @@
   "scripts": {
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run --config-file cypress.config.js",
-    "cy:runstage": "npx cypress run --config-file cypress.config.staging.js"
+    "cy:runstage": "npx cypress run --config-file cypress.config.staging.js",
+    "cy:testchrome": "npx cypress run --browser chrome --spec cypress/e2e/3-verifier/headerschecking.cy.js --record --key 3445ef94-6acb-4262-b8fc-3bf0fcbb8c61",
+    "cy:testelectron": "npx cypress run --browser electron --spec cypress/e2e/3-verifier/headerschecking.cy.js --record --key 3445ef94-6acb-4262-b8fc-3bf0fcbb8c61",
+    "cy:runtests": "npx cypress run cy:testchrome && npx cypress run cy:testelectron"
   },
   "keywords": [
     "cypress"
