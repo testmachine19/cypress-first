@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "description": "check correct",
+      "username": "st_st",
+      "password": "student_1"
+    },
+    {
+      "description": "check null username",
+      "username": "",
+      "password": "student_1"
+    },
+    {
+      "description": "check null password",
+      "username": "st_st",
+      "password": ""
+    },
+    {
+      "description": "check numbers username",
+      "username": "12345",
+      "password": "student_1"
+    },
+    {
+      "description": "check null both",
+      "username": "",
+      "password": ""
+    },
+    {
+      "description": "check incorrect password",
+      "username": "st_st",
+      "password": "student_112"
+    }
+  ]
+}

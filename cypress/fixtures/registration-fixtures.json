@@ -1,0 +1,46 @@
+{
+  "registrationTests": [
+    {
+      "description": "check correct",
+      "name": "John",
+      "email": "new12345@gmail.com",
+      "password": "student_1",
+      "confirmation": "student_1"
+    },
+    {
+      "description": "check numbers in a name",
+      "name": "12345",
+      "email": "new12346@gmail.com",
+      "password": "student_2",
+      "confirmation": "student_2"
+    },
+    {
+      "description": "check null in a name",
+      "name": "",
+      "email": "new12347@gmail.com",
+      "password": "student_3",
+      "confirmation": "student_3"
+    },
+    {
+      "description": "check russian name",
+      "name": "Олег",
+      "email": "new12347@gmail.com",
+      "password": "student_4",
+      "confirmation": "student_4"
+    },
+    {
+      "description": "check incorrect mail",
+      "name": "Олег",
+      "email": "123456",
+      "password": "student_5",
+      "confirmation": "student_5"
+    },
+    {
+      "description": "check wrong confirmation",
+      "name": "loki",
+      "email": "123456567df@mail.ru",
+      "password": "student_6",
+      "confirmation": "student_5"
+    }
+  ]
+}
