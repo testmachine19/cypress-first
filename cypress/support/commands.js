@@ -50,3 +50,17 @@ Cypress.Commands.add("selectAccountMenuItem", (menuItem) => {
 Cypress.Commands.add("clickHomeButton", () => {
   cy.get(".nav-item").click();
 });
+
+Cypress.Commands.add(
+  "registration",
+  (username, email, firstPassword, secondPassword) => {
+    cy.visit("/");
+    cy.get('[data-cy="accountMenu"]').click();
+    cy.get('[data-cy="register"]').click();
+    cy.get("#username").type(username);
+    cy.get("#email").type(email);
+    cy.get("#firstPassword").type(firstPassword);
+    cy.get("#secondPassword").type(secondPassword);
+    cy.get('[data-cy="submit"]').click();
+  }
+);

@@ -47,4 +47,46 @@ describe("Checking header", () => {
   it("check home button", () => {
     cy.get(".nav-item").click();
   });
+
+  describe("User Registration", () => {
+    it("check correct", () => {
+      cy.registration("John", "new12345@gmail.com", "student_1", "student_1");
+    });
+
+    it("check numbers in a name", () => {
+      cy.registration("12345", "new12346@gmail.com", "student_2", "student_2");
+    });
+
+    it("check null in a name", () => {
+      cy.registration("", "new12347@gmail.com", "student_3", "student_3");
+    });
+
+    it("check russian name", () => {
+      cy.registration("Олег", "new12347@gmail.com", "student_4", "student_4");
+    });
+
+    it("check incorrect mail", () => {
+      cy.registration("Олег", "123456", "student_5", "student_5");
+    });
+
+    it("check wrong confirmation", () => {
+      cy.registration("loki", "123456567df@mail.ru", "student_6", "student_5");
+    });
+
+    it("check null password", () => {
+      cy.registration("Floki", "123456567sf@mail.ru", "", "student_5");
+    });
+
+    it("check null name and password", () => {
+      cy.registration("", "123456567as@mail.ru", "", "student_5");
+    });
+
+    it("check special signs", () => {
+      cy.registration("#%$&#**$*#", "#$%#$%#%#", "student_1", "student_1");
+    });
+
+    it("check same data", () => {
+      cy.registration("John", "new12345@gmail.com", "student_1", "student_1");
+    });
+  });
 });
